@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/insightsFragment"
+        android:name="com.notocia.erraya.fragments.home.InsightsFragment"
+        android:label="activity_main"
+        tools:layout="@layout/fragment_insights" >
+        <action
+            android:id="@+id/action_insightsFragment_to_fragmentPreferences"
+            app:destination="@id/fragmentPreferences" />
+        <action
+            android:id="@+id/action_insightsFragment_to_fragmentMap"
+            app:destination="@id/fragmentMap" />
+        <action
+            android:id="@+id/action_insightsFragment_to_fragmentResetMode"
+            app:destination="@id/fragmentResetMode" />
+        <action
+            android:id="@+id/action_insightsFragment_to_fragmentNotification"
+            app:destination="@id/fragmentNotification" />
+        <action
+            android:id="@+id/action_insightsFragment_to_fragmentResetMode2"
+            app:destination="@id/fragmentResetMode" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.notocia.erraya.fragments.home.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_messageFragment_to_fragmentPreferences"
+            app:destination="@id/fragmentPreferences" />
+        <action
+            android:id="@+id/action_messageFragment_to_fragmentMap"
+            app:destination="@id/fragmentMap" />
+        <action
+            android:id="@+id/action_messageFragment_to_fragmentResetMode"
+            app:destination="@id/fragmentResetMode" />
+        <action
+            android:id="@+id/action_messageFragment_to_fragmentNotification"
+            app:destination="@id/fragmentNotification" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.notocia.erraya.fragments.home.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_editProfileActivity2"
+            app:destination="@id/editProfileActivity2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_settingsActivity"
+            app:destination="@id/settingsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.notocia.erraya.fragments.home.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentPreferences"
+            app:destination="@id/fragmentPreferences" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentMap"
+            app:destination="@id/fragmentMap" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentResetMode"
+            app:destination="@id/fragmentResetMode" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentNotification"
+            app:destination="@id/fragmentNotification" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentViewProfile"
+            app:destination="@id/fragmentViewProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPreferences"
+        android:name="com.notocia.erraya.fragments.home.FragmentPreferences"
+        android:label="FragmentPreferences" />
+    <fragment
+        android:id="@+id/fragmentMap"
+        android:name="com.notocia.erraya.fragments.home.FragmentMap"
+        android:label="FragmentMap" />
+    <fragment
+        android:id="@+id/fragmentResetMode"
+        android:name="com.notocia.erraya.fragments.home.FragmentResetMode"
+        android:label="FragmentResetMode" />
+    <fragment
+        android:id="@+id/fragmentNotification"
+        android:name="com.notocia.erraya.fragments.home.FragmentNotification"
+        android:label="FragmentNotification"
+        tools:layout="@layout/fragment_notification"/>
+    <activity
+        android:id="@+id/editProfileActivity2"
+        android:name="com.notocia.erraya.EditProfileActivity"
+        android:label="activity_edit_profile"
+        tools:layout="@layout/activity_edit_profile" />
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.notocia.erraya.SettingsActivity"
+        android:label="activity_settings"
+        tools:layout="@layout/activity_settings" />
+    <fragment
+        android:id="@+id/fragmentViewProfile"
+        android:name="com.notocia.erraya.fragments.home.FragmentViewProfile"
+        android:label="fragment_view_profile"
+        tools:layout="@layout/fragment_view_profile" />
+</navigation>

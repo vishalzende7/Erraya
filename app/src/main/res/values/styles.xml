@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Erraya.header_text">
+        <item name="font">@font/poppins_bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/copper_text_color</item>
+    </style>
+
+    <style name="Theme.Erraya.RatingBar">
+        <item name="colorControlActivated">#BBA908</item>
+        <item name="colorControlNormal">@color/gray_400</item>
+    </style>
+
+    <style name="Theme.Erraya.PitView">
+        <item name="neuLightShadowColor">#FFFFFF</item>
+        <item name="neuDarkShadowColor">#27586C8A</item>
+        <item name="softEdgeColor">@color/synth_light</item>
+        <item name="neuCompatColor">@color/synth_light</item>
+    </style>
+
+    <style name="SynthButtonSoft" parent="Theme.Erraya.SynthImageButton">
+        <item name="neuBorderPressedStartColor">@color/synth_light</item>
+        <item name="neuBorderPressedEndColor">@color/synth_light</item>
+    </style>
+
+    <style name="Theme.Erraya.SynthImageButton">
+        <item name="neuLightShadowColor">@color/synth_light_shadow_color_light</item>
+        <item name="neuDarkShadowColor">@color/synth_dark_shadow_light</item>
+        <item name="neuFillStartColor">@color/synth_light</item>
+        <item name="neuFillEndColor">@color/synth_light</item>
+        <item name="neuFillPressedStartColor">@color/synth_dark_shadow_light</item>
+        <item name="neuFillPressedEndColor">@color/synth_filled_pressed_end_color_light</item>
+        <item name="neuBorderStartColor">@color/synth_light</item>
+        <item name="neuBorderEndColor">@color/synth_light</item>
+        <item name="neuBorderPressedStartColor">@color/synth_light</item>
+        <item name="neuBorderPressedEndColor">@color/synth_light</item>
+    </style>
+
+    <style name="Widget.Theme.Erraya.NeuCheckbox" parent="">
+        <item name="backgroundColor">@color/synth_light</item>
+        <item name="iconColor">?attr/colorSecondary</item>
+        <item name="srcCompat">@drawable/ic_icon_tick</item>
+        <item name="tint">?attr/colorSecondary</item>
+    </style>
+
+    <style name="Theme.Erraya.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">?colorSecondary</item>
+        <item name="android:textColorHint">#717480</item>
+        <item name="maxLines">1</item>
+    </style>
+
+    <style name="mChechbox" parent="Theme.Erraya">
+        <item name="colorControlNormal">@color/synth_color</item>
+        <item name="android:textColor">@color/synth_color</item>
+        <item name="buttonTint">@color/synth_color</item>
+    </style>
+
+    <style name="Theme.Erraya.LinkTextView" parent="">
+        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="Theme.Erraya.Switch" >
+        <item name="trackTint">@color/track_tint</item>
+        <item name="thumbTint">@color/synth_light</item>
+    </style>
+
+    <style name="Theme.Erraya.Slider">
+        <item name="trackColorActive">?attr/colorSecondary</item>
+        <item name="trackColorInactive">@color/synth_light_variant</item>
+    </style>
+
+    <style name="Theme.Erraya.ElevatedView">
+        <item name="neuLightShadowColor">#F6F7FC</item>
+        <item name="neuDarkShadowColor">#F6F7FC</item>
+        <item name="neuFillStartColor">@color/synth_light</item>
+        <item name="neuFillEndColor">@color/synth_light_variant</item>
+        <item name="neuBorderStartColor">@color/synth_light</item>
+        <item name="neuBorderEndColor">@color/synth_light</item>
+    </style>
+
+    <style name="Theme.Erraya.ElevateView">
+        <item name="blurRadius">8dp</item>
+        <item name="fillColor">?colorPrimary</item>
+        <item name="bottomRightShadow">@color/synth_light_variant</item>
+        <item name="topLeftShadow">#65415D26</item>
+    </style>
+
+    <style name="Theme.Erraya.RadioButton">
+        <item name="light_InnerShadow">#FFFFFF</item>
+        <item name="dark_InnerShadow">#27586C8A</item>
+        <item name="active_color">?colorSecondary</item>
+    </style>
+
+    <style name="Widget.App.Tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="android:textAppearance">@style/TextAppearance.App.Tooltip</item>
+        <item name="backgroundTint">?colorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.App.Tooltip" parent="TextAppearance.MaterialComponents.Tooltip">
+        <item name="android:textColor">?colorOnSecondary</item>
+    </style>
+</resources>

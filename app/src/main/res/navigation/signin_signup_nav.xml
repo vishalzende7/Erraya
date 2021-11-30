@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signin_signup_nav"
+    app:startDestination="@id/mobileFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/mobileFragment"
+        android:name="com.notocia.erraya.fragments.signin.MobileFragment"
+        android:label="MobileFragment"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_mobileFragment_to_fragmentOtp"
+            app:destination="@id/fragmentOtp" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOtp"
+        android:name="com.notocia.erraya.fragments.signin.FragmentOtp"
+        android:label="activity_otp"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_fragmentOtp_to_emailFragment"
+            app:destination="@id/emailFragment" />
+        <action
+            android:id="@+id/action_fragmentOtp_to_fragmentLoader"
+            app:destination="@id/fragmentLoader" />
+    </fragment>
+
+    <activity
+        android:id="@+id/createProfileActivity"
+        android:name="com.notocia.erraya.CreateProfileActivity"
+        android:label="CreateProfileActivity"
+        tools:layout="@layout/activity_create_profile"/>
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.notocia.erraya.fragments.signin.EmailFragment"
+        android:label="fragment_email"
+        tools:layout="@layout/fragment_email" >
+        <action
+            android:id="@+id/action_emailFragment_to_createProfileActivity"
+            app:destination="@id/createProfileActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.notocia.erraya.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/fragmentLoader"
+        android:name="com.notocia.erraya.fragments.home.FragmentLoader"
+        android:label="fragment_load_profile"
+        tools:layout="@layout/fragment_load_profile" >
+        <action
+            android:id="@+id/action_fragmentLoader_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+</navigation>

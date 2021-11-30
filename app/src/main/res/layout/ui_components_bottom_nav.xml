@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false"
+    tools:context="com.notocia.erraya.uicomponents.BottomNav"
+    tools:parentTag="com.notocia.erraya.uicomponents.BottomNav">
+
+    <TextView
+        android:id="@+id/labelHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/label_home"
+        android:textSize="11sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/gray_400"
+        app:layout_constraintBottom_toTopOf="@id/wrapperHome"
+        app:layout_constraintStart_toStartOf="parent" />
+    <FrameLayout
+        android:id="@+id/wrapperHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <club.cred.synth.views.SynthImageButton
+            android:id="@+id/buttonHome"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:padding="16dp"
+            android:src="@drawable/ic_home"
+            android:tint="?attr/colorOnPrimary"
+            app:neuButtonRadius="@dimen/button_radius"
+            app:neuButtonType="elevated_soft"
+            app:neuPlatformAppearance="@style/Theme.Erraya.SynthImageButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/labelMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/message"
+        android:textSize="11sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/gray_400"
+        app:layout_constraintBottom_toTopOf="@id/wrapperMessage"
+        app:layout_constraintStart_toStartOf="@id/wrapperMessage"
+        app:layout_constraintEnd_toEndOf="@id/wrapperMessage"/>
+
+    <FrameLayout
+        android:id="@+id/wrapperMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wrapperHome"
+        app:layout_constraintEnd_toStartOf="@id/wrapperInsights"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <club.cred.synth.views.SynthImageButton
+            android:id="@+id/buttonMessage"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:padding="16dp"
+            android:tint="?attr/colorOnPrimary"
+            app:neuButtonRadius="@dimen/button_radius"
+            app:neuButtonType="elevated_soft"
+            app:srcCompat="@drawable/ic_msg"
+            app:neuPlatformAppearance="@style/Theme.Erraya.SynthImageButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/labelInsights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/label_insights"
+        android:textSize="11sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/gray_400"
+        app:layout_constraintBottom_toTopOf="@id/wrapperInsights"
+        app:layout_constraintStart_toStartOf="@id/wrapperInsights"
+        app:layout_constraintEnd_toEndOf="@id/wrapperInsights"/>
+    <FrameLayout
+        android:id="@+id/wrapperInsights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/wrapperProfile"
+        app:layout_constraintStart_toEndOf="@id/wrapperMessage"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <club.cred.synth.views.SynthImageButton
+            android:id="@+id/buttonInsights"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:padding="16dp"
+            android:tint="?attr/colorOnPrimary"
+            app:neuButtonRadius="@dimen/button_radius"
+            app:neuButtonType="elevated_soft"
+            app:srcCompat="@drawable/ic_insights"
+            app:neuPlatformAppearance="@style/Theme.Erraya.SynthImageButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/labelProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/label_profile"
+        android:textSize="11sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/gray_400"
+        app:layout_constraintBottom_toTopOf="@id/wrapperProfile"
+        app:layout_constraintStart_toStartOf="@id/wrapperProfile"
+        app:layout_constraintEnd_toEndOf="@id/wrapperProfile"/>
+    <FrameLayout
+        android:id="@+id/wrapperProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <club.cred.synth.views.SynthImageButton
+            android:id="@+id/buttonProfile"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:padding="16dp"
+            android:tint="?attr/colorOnPrimary"
+            app:neuButtonRadius="@dimen/button_radius"
+            app:neuButtonType="elevated_soft"
+            app:srcCompat="@drawable/ic_profile"
+            app:neuPlatformAppearance="@style/Theme.Erraya.SynthImageButton"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </FrameLayout>
+
+</merge>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTopButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
+
+        <club.cred.synth.views.SynthImageButton
+            android:id="@+id/buttonPreference"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:tag="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neuButtonRadius="@dimen/button_radius"
+            app:neuButtonType="elevated_soft"
+            app:srcCompat="@drawable/ic_settings_24" />
+
+
+        <club.cred.synth.views.SynthImageButton
+            android:id="@+id/buttonNotification"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp"
+            android:tag="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neuButtonRadius="@dimen/button_radius"
+            app:neuButtonType="elevated_soft"
+            app:srcCompat="@drawable/ic_headphones" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.notocia.erraya.fragments.home.ProfileFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/ic_placeholder"
+                app:civ_border_color="?attr/colorSecondary"
+                app:civ_border_width="4dp" />
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/mark_jacobs_25"
+                android:textSize="18sp"
+                app:drawableEndCompat="@drawable/ic_blue_tick" />
+
+            <club.cred.synth.views.SynthButton
+                android:id="@+id/buttonEditProfile"
+                android:layout_width="140dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:drawablePadding="14dp"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/edit_profile"
+                android:textColor="@color/copper_text_color"
+                app:neuButtonRadius="23dp"
+                app:neuButtonType="elevated_soft"
+                app:neuPlatformAppearance="@style/SynthButtonSoft"
+                app:neuPlatformColor="@color/synth_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/my_subscription"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textSubscriptionDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/para"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/textMactheLeft"
+                style="@style/Theme.Erraya.LinkTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="@string/match_status"
+                android:textSize="11sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="32dp"
+                app:labelBehavior="gone"
+                android:value="50.0"
+                android:valueFrom="0.0"
+                android:valueTo="100.0"
+                app:thumbColor="?colorPrimary"
+                app:thumbElevation="8dp"
+                style="@style/Theme.Erraya.Slider"
+                app:trackHeight="6dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:clipChildren="false"
+                android:orientation="horizontal">
+
+                <club.cred.synth.views.SynthButton
+                    android:id="@+id/buttonRenew"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="14dp"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/button_text_renew"
+                    android:textColor="@color/copper_text_color"
+                    app:neuButtonRadius="23dp"
+                    app:neuButtonType="elevated_soft"
+                    app:neuPlatformAppearance="@style/SynthButtonSoft"
+                    app:neuPlatformColor="@color/synth_color" />
+
+                <club.cred.synth.views.SynthButton
+                    android:id="@+id/buttonUpgrade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="14dp"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/button_text_upgrade"
+                    android:textColor="@color/copper_text_color"
+                    app:neuButtonRadius="23dp"
+                    app:neuButtonType="elevated_soft"
+                    app:neuPlatformAppearance="@style/SynthButtonSoft"
+                    app:neuPlatformColor="@color/synth_color" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/text_subscribe"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

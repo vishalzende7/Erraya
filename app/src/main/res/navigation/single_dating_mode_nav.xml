@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/single_dating_mode_nav"
+    app:startDestination="@id/datingModeFragment">
+
+    <fragment
+        android:id="@+id/datingModeFragment"
+        android:name="com.notocia.erraya.fragments.DatingModeFragment"
+        android:label="fragment_dating_mode"
+        tools:layout="@layout/fragment_dating_mode" />
+</navigation>

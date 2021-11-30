@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_profile_nav"
+    app:startDestination="@id/enterNameFragment">
+
+    <fragment
+        android:id="@+id/enterNameFragment"
+        android:name="com.notocia.erraya.fragments.profiles.NameFragment"
+        android:label="fragment_create_profile_enter_name"
+        tools:layout="@layout/fragment_create_profile_enter_name" >
+        <action
+            android:id="@+id/action_enterNameFragment_to_birthDateFragment"
+            app:destination="@id/birthDateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/birthDateFragment"
+        android:name="com.notocia.erraya.fragments.profiles.BirthDateFragment"
+        android:label="fragment_birth_date"
+        tools:layout="@layout/fragment_birth_date" >
+        <action
+            android:id="@+id/action_birthDateFragment_to_genderFragment"
+            app:destination="@id/genderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genderFragment"
+        android:name="com.notocia.erraya.fragments.profiles.GenderFragment"
+        android:label="fragment_gender"
+        tools:layout="@layout/fragment_gender" >
+        <action
+            android:id="@+id/action_genderFragment_to_uploadPhotos"
+            app:destination="@id/uploadPhotos" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadPhotos"
+        android:name="com.notocia.erraya.fragments.profiles.UploadPhotos"
+        android:label="fragment_upload_photos"
+        tools:layout="@layout/fragment_upload_photos" >
+        <action
+            android:id="@+id/action_uploadPhotos_to_interestFragment"
+            app:destination="@id/interestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interestFragment"
+        android:name="com.notocia.erraya.fragments.profiles.InterestFragment"
+        android:label="fragment_interest"
+        tools:layout="@layout/fragment_interest" >
+        <action
+            android:id="@+id/action_interestFragment_to_datingModeActivity"
+            app:destination="@id/datingModeActivity"
+            app:launchSingleTop="true" />
+    </fragment>
+    <activity
+        android:id="@+id/datingModeActivity"
+        android:name="com.notocia.erraya.DatingModeActivity"
+        android:label="activity_dating_mode"
+        tools:layout="@layout/activity_dating_mode" />
+</navigation>

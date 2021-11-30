@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.notocia.erraya.fragments.home.FragmentNotification">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <club.cred.synth.views.SynthImageButton
+            android:id="@+id/buttonBack"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp"
+            android:tag="0"
+            app:neuButtonRadius="@dimen/button_radius"
+            app:neuButtonType="elevated_soft"
+            app:srcCompat="@drawable/ic_left" />
+
+        <TextView
+            android:id="@+id/textWindowTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/title_preference"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp"
+                android:orientation="vertical">
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:id="@+id/preferenceCatDrinking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_drinking_cat"
+                        app:state="expanded"
+                        app:title="Drinking" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueSocial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Socially" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueNever"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        app:refId="1"
+                        app:title="Never" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueFrequently"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        app:refId="1"
+                        app:title="Frequently" />
+
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp">
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_smoking"
+                        app:state="expanded"
+                        app:title="Smoking" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueSmokeSocial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Socially" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueSmokeNever"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Never" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueSmokeFrequently"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Frequently" />
+
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp"
+                android:orientation="vertical">
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_food"
+                        app:state="expanded"
+                        app:title="Food" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueMexican"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Maxican" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueIndian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="2"
+                        app:title="Indian" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueChinese"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="3"
+                        app:title="Chinese" />
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp"
+                android:orientation="vertical">
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_religon"
+                        app:state="collapsed"
+                        app:title="Religion" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valuHindu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Hindu" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valuMuslim"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="2"
+                        app:title="Muslim" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valuJain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="3"
+                        app:title="Jain" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valuSikh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="4"
+                        app:title="Sikh" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueSpiritual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="5"
+                        app:title="Spiritual" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueChristian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="6"
+                        app:title="Christian" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueBuddhist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="7"
+                        app:title="Buddhist" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="8"
+                        app:title="Other" />
+
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp"
+                android:orientation="vertical">
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_politics"
+                        app:state="collapsed"
+                        app:title="Politics" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueSomehow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Somehow" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueHigh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="2"
+                        app:title="High" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueDont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="3"
+                        app:title="Don't want" />
+
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp"
+                android:orientation="vertical">
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_zodiac"
+                        app:state="expanded"
+                        app:title="Zodiac Sign" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueAquarius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Aquarius" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valuePisces"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="2"
+                        app:title="Pisces" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueAries"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="3"
+                        app:title="Aries" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueTaurus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="4"
+                        app:title="Taurus" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueGemini"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="5"
+                        app:title="Gemini" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueCancer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="6"
+                        app:title="Cancer" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueLeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="7"
+                        app:title="Leo" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueVirgo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="8"
+                        app:title="Virgo" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueLibra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="9"
+                        app:title="Libra" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueScorpio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="10"
+                        app:title="Scorpio" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueSagittarius"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="11"
+                        app:title="Sagittarius" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueCapricorn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="12"
+                        app:title="Capricorn" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueAnyone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="13"
+                        app:title="Anyone" />
+
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp"
+                android:orientation="vertical">
+
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_children"
+                        app:state="expanded"
+                        app:title="Children" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueSomeday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Someday" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueChildNever"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="2"
+                        app:title="Never" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueHaveNMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="3"
+                        app:title="Already have &amp; want more" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueNotSure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="4"
+                        app:title="Not sure yet" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueHaveNNoMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="5"
+                        app:title="Have &amp; don't want more" />
+
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp">
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_looking"
+                        app:state="expanded"
+                        app:title="Looking for" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueMen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="Men" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueWomen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="2"
+                        app:title="Women" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueLookingOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="3"
+                        app:title="Other" />
+
+
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp"
+                android:orientation="vertical">
+
+                <com.notocia.erraya.uicomponents.PreferenceDropdown
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:state="collapsed">
+
+                    <com.notocia.erraya.uicomponents.PreferenceTitle
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_education"
+                        app:state="expanded"
+                        app:title="Education" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueHighSchool"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="1"
+                        app:title="High School" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueInCollege"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="2"
+                        app:title="In College" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueInTechCollege"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="3"
+                        app:title="In Tech College" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueInManCollege"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="4"
+                        app:title="In Management College" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueGraduated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="5"
+                        app:title="Graduated" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valuePostGrad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="6"
+                        app:title="Post Graduated" />
+
+                    <com.notocia.erraya.uicomponents.PreferenceOption
+                        android:id="@+id/valueEduOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="8dp"
+                        app:refId="7"
+                        app:title="Other" />
+
+                </com.notocia.erraya.uicomponents.PreferenceDropdown>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="48dp"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/text_age" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/seekBar"
+                        style="@style/Theme.Erraya.Slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:stepSize="1.0"
+                        android:valueFrom="18.0"
+                        android:valueTo="45.0"
+                        app:labelStyle="@style/Widget.App.Tooltip"
+                        app:thumbColor="?colorPrimary"
+                        app:thumbElevation="8dp"
+                        app:tickVisible="false"
+                        app:trackHeight="6dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="18" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="45" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:minHeight="48dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/text_distance" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/distanceSeekbar"
+                        style="@style/Theme.Erraya.Slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:stepSize="1.0"
+                        android:valueFrom="1"
+                        android:valueTo="50"
+                        app:labelStyle="@style/Widget.App.Tooltip"
+                        app:thumbColor="?colorPrimary"
+                        app:thumbElevation="8dp"
+                        app:tickVisible="false"
+                        app:trackHeight="6dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="@string/text_1kms" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/text_50kms" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp">
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+
+                <LinearLayout
+                    android:id="@+id/actionChangeLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/text_current_location" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bangalore" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp">
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+
+                <LinearLayout
+                    android:id="@+id/actionChangeWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/text_work" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Designer" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp">
+
+                <club.cred.synth.views.PitView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:neuCornerRadius="@dimen/pit_corner_radius"
+                    app:pitDepth="@dimen/pit_depth"
+                    app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+
+                <LinearLayout
+                    android:id="@+id/actionShowMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/text_show_me" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <club.cred.synth.views.PitView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:neuCornerRadius="@dimen/pit_corner_radius"
+        app:pitDepth="@dimen/pit_depth"
+        app:pitViewAppearance="@style/Theme.Erraya.PitView" />
+
+    <ImageView
+        android:id="@+id/buttonAdd"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/image_view_description"
+        app:tint="?colorSecondary"
+        android:src="@drawable/ic_add" />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:visibility="gone"
+        android:contentDescription="@string/image_view_description"/>
+
+</merge>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main_nav"
+app:startDestination="@id/infoFragmentOne">
+
+<fragment
+    android:id="@+id/infoFragmentOne"
+    android:name="com.notocia.erraya.fragments.InfoFragmentOne"
+    android:label="InfoFragmentOne"
+    tools:layout="@layout/layout_infoscreen_1">
+    <action
+        android:id="@+id/action_infoFragmentOne_to_infoFragmentTwo"
+        app:destination="@id/infoFragmentTwo" />
+</fragment>
+
+<fragment
+    android:id="@+id/infoFragmentTwo"
+    android:name="com.notocia.erraya.fragments.InfoFragmentTwo"
+    android:label="InfoFragmentTwo"
+    tools:layout="@layout/layout_infoscreen_2">
+    <action
+        android:id="@+id/action_infoFragmentTwo_to_infoFragmentThree"
+        app:destination="@id/infoFragmentThree" />
+</fragment>
+
+<fragment
+    android:id="@+id/infoFragmentThree"
+    android:name="com.notocia.erraya.fragments.InfoFragmentThree"
+    android:label="InfoFragmentThree"
+    tools:layout="@layout/layout_infoscreen_3">
+    <action
+        android:id="@+id/action_infoFragmentThree_to_signupActivity"
+        app:destination="@id/signupActivity" />
+</fragment>
+<activity
+    android:id="@+id/signupActivity"
+    android:name="com.notocia.erraya.SignupActivity"
+    android:label="SignupActivity"
+    tools:layout="@layout/activity_signin_signup_host"/>
+</navigation>

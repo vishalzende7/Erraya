@@ -1,0 +1,81 @@
+<resources>
+    <declare-styleable name="CheckBox">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="iconColor" format="color" />
+        <attr name="srcCompat" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="BottomNav">
+        <attr name="activeTint" format="color"/>
+        <attr name="activeTab" format="integer"/>
+        <attr name="colorOnPrimary" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeView">
+        <attr name="itemCount" format="integer" />
+        <attr name="toolLayout" format="reference" />
+        <attr name="childOffset" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="SwipeDeck">
+        <attr name="max_visible" format="integer"/>
+        <attr name="rotation_degrees" format="float"/>
+        <attr name="card_spacing" format="dimension"/>
+        <attr name="render_above" format="boolean"/>
+        <attr name="render_below" format="boolean"/>
+        <attr name="card_gravity" format="integer"/>
+        <attr name="opacity_end" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="PreferenceTitle">
+        <attr name="title"/>
+        <attr name="icon"/>
+    </declare-styleable>
+    <declare-styleable name="PreferenceDropdown">
+        <attr name="state" format="enum|integer">
+            <enum name="collapsed" value="0"/>
+            <enum value="1" name="expanded"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="PreferenceOption">
+        <attr name="title"/>
+        <attr name="refId" format="integer"/>
+        <attr name="isChecked" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="InfoWidget">
+        <attr name="title"/>
+        <attr name="showIcon" format="boolean"/>
+        <attr name="iconTint"/>
+    </declare-styleable>
+    <declare-styleable name="ElevateView">
+        <attr name="blurRadius" format="dimension"/>
+        <attr name="fillColor" format="color"/>
+        <attr name="bottomRightShadow" format="color"/>
+        <attr name="topLeftShadow" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="RadioPit">
+        <attr name="pit_appearance" format="reference"/>
+        <attr name="isChecked"/>
+    </declare-styleable>
+    <declare-styleable name="RadioPit_Appearance">
+        <attr name="light_InnerShadow" format="color"/>
+        <attr name="dark_InnerShadow" format="color"/>
+        <attr name="active_color" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="TitleIcon">
+        <attr name="title"/>
+    </declare-styleable>
+    <declare-styleable name="NeuSelectBox">
+        <attr name="pit_appearance"/>
+        <attr name="isChecked"/>
+    </declare-styleable>
+    <declare-styleable name="PitLayout">
+        <attr name="pitColor"/>
+        <attr name="pitViewAppearance"/>
+        <attr name="neuCornerRadius"/>
+        <attr name="pitClipType"/>
+        <attr name="pitDepth"/>
+        <attr name="drawBackground"/>
+        <attr name="drawShadows"/>
+        <attr name="isCard"/>
+        <attr name="isSoft"/>
+    </declare-styleable>
+
+</resources>

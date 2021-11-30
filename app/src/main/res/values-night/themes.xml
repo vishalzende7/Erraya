@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Erraya" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/synth_color</item>
+        <item name="colorPrimaryVariant">@color/synth_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/copper_text_color</item>
+        <item name="colorSecondaryVariant">@color/copper_text_color_30</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/synth_color</item>
+        <item name="android:navigationBarColor">@color/synth_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/synth_color</item>
+        <item name="neuPlatformColor">@color/synth_color</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="neuPlatformAppearance">@style/Theme.Erraya.SynthImageButton</item>
+    </style>
+
+    <style name="Theme.Erraya.rose_gold" parent="Theme.Erraya">
+        <item name="tint">@color/rose_gold</item>
+    </style>
+
+    <style name="Theme.Erraya.egg_blue" parent="Theme.Erraya">
+        <item name="tint">@color/egg_blue</item>
+    </style>
+
+    <style name="Theme.Erraya.blue_ribbon" parent="Theme.Erraya">
+        <item name="tint">@color/blue_ribbon</item>
+    </style>
+
+    <style name="Theme.Erraya.cream_can" parent="Theme.Erraya">
+        <item name="tint">@color/cream_can</item>
+    </style>
+
+    <style name="Theme.Erraya.heliotrope" parent="Theme.Erraya">
+        <item name="tint">@color/heliotrope</item>
+    </style>
+
+    <style name="Theme.Erraya.raffia" parent="Theme.Erraya">
+        <item name="tint">@color/raffia</item>
+    </style>
+
+    <style name="Theme.Erraya.NoActionBar" parent="Theme.Erraya">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">true</item>
+    </style>
+
+</resources>

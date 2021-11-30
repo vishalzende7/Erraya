@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pit_depth">6dp</dimen>
+    <dimen name="start_end_margin">32dp</dimen>
+    <dimen name="button_radius">28dp</dimen>
+    <dimen name="pit_corner_radius">9dp</dimen>
+</resources>

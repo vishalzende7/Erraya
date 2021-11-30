@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.notocia.erraya.fragments.editprofile.FragmentEditProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        tools:context="com.notocia.erraya.fragments.home.FragmentNotification">
+
+        <com.notocia.erraya.uicomponents.ImageUploadManager
+            android:id="@+id/imageUploadManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" />
+
+        <com.notocia.erraya.uicomponents.InfoWidget
+            android:id="@+id/basicInfoWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:iconTint="?colorOnPrimary"
+            app:title="My Basic Info" />
+
+        <com.notocia.erraya.uicomponents.InfoWidget
+            android:id="@+id/interestInfoWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:iconTint="?colorOnPrimary"
+            app:title="My Interest"/>
+
+        <com.notocia.erraya.uicomponents.InfoWidget
+            android:id="@+id/aboutInfoWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:title="About Me"/>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

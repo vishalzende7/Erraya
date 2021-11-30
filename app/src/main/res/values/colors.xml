@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="copper_text_color">#EDAB94</color>
+    <color name="copper_text_color_30">#33f9d3b4</color>
+
+
+    <color name="synth_light">#ecedf2</color>
+    <color name="synth_light_variant">#E5E6EC</color>
+    <color name="synth_color">#1A1B1D</color>
+    <color name="primaryDark">#151618</color>
+    <color name="pit_color">#1A1B1D</color>
+    <color name="onPrimaryLightMode">#454646</color>
+    <color name="button_border_pressed">#232528</color>
+
+    <color name="copper">#EDAB94</color>
+    <color name="rose_gold">#CF989F</color>
+    <color name="egg_blue">#03DAC6</color>
+    <color name="blue_ribbon">#0D4CEE</color>
+    <color name="cream_can">#F3CD5C</color>
+    <color name="heliotrope">#BB86FC</color>
+    <color name="raffia">#E8D8B0</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+
+    <color name="synth_dark_shadow_light">#FFFFFF</color>
+    <color name="synth_filled_pressed_end_color_light">#D1D3D5</color>
+    <color name="synth_light_shadow_color_light">#3B415D26</color>
+
+</resources>
